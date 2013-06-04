@@ -1,6 +1,6 @@
 <?php namespace Teepluss\Asset;
 
-use Illuminate\Support\Facades\Html;
+use Illuminate\Support\Facades\HTML;
 
 class Asset {
 
@@ -239,7 +239,7 @@ class Asset_Container {
 			$asset['source'] = $this->path($asset['source']);
 		}
 
-		return Html::$group($asset['source'], $asset['attributes']);
+		return HTML::$group($asset['source'], $asset['attributes']);
 	}
 
 	/**
