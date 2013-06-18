@@ -1,6 +1,7 @@
 <?php namespace Teepluss\Asset;
 
 use Illuminate\Support\Facades\HTML;
+use Config;
 
 class Asset {
 
@@ -156,6 +157,13 @@ class Asset_Container {
 	 */
 	public function path($source)
 	{
+		// If a base asset URL is defined in the configuration, use that.
+		// This allows the delivery of assets through a different server 
+		// or third-party content delivery network.
+        if ($root = Config::get('app.asset_url', false))
+        {
+                return rtrim($root, '/').'/'.ltrim($source, '/');
+        }
 		return $source;
 	}
 
