@@ -2,8 +2,9 @@
     "name": "teepluss/asset",
     "description": "Laravel 4 Assets Manage",
     "keywords": ["laravel", "laravel4", "asset", "assets"],
-    "homepage": "https://github.com/teepluss/laravel4-asset.git",
+    "homepage": "https://github.com/teepluss/laravel4-asset",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Teepluss",
