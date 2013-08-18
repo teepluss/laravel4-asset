@@ -242,7 +242,7 @@ class Asset_Container {
 		// If the bundle source is not a complete URL, we will go ahead and prepend
 		// the bundle's asset path to the source provided with the asset. This will
 		// ensure that we attach the correct path to the asset.
-		if (filter_var($asset['source'], FILTER_VALIDATE_URL) === false)
+		if ( ! preg_match('/^(\w+:)?\/\//i', $asset['source']) )
 		{
 			$asset['source'] = $this->path($asset['source']);
 		}
